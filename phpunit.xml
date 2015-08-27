@@ -1,31 +1,48 @@
-<?php
-class Example extends PHPUnit_Extensions_SeleniumTestCase
-{
-  protected function setUp()
-  {
-    $this->setBrowser("*chrome");
-    $this->setBrowserUrl("http://seleniumeasy.com/");
-  }
-
-  public function testMyTestCase()
-  {
-    $this->open("/tags/dataprovider");
-    $this->click("link=Passing data to DataProvider from Excel sheet");
-    $this->waitForPageToLoad("30000");
-    $this->click("css=button.add_to_cart");
-    $this->waitForPageToLoad("30000");
-    $this->click("xpath=(//button[@type='submit'])[3]");
-    $this->waitForPageToLoad("30000");
-    $this->click("xpath=(//button[@type='submit'])[4]");
-    $this->waitForPageToLoad("30000");
-    $this->click("css=button[type=\"submit\"]");
-    $this->waitForPageToLoad("30000");
-    $this->click("css=button[type=\"submit\"]");
-    $this->waitForPageToLoad("30000");
-    $this->click("link=Checkout");
-    $this->waitForPageToLoad("30000");
-    $this->click("css=button[type=\"submit\"]");
-    $this->waitForPageToLoad("30000");
-  }
-}
-?>
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase seleniumIDEVersion="2.9.0" baseURL="http://seleniumeasy.com/">
+<selenese>
+	<command>open</command>
+	<target><![CDATA[/tags/dataprovider]]></target>
+	<value><![CDATA[]]></value>
+</selenese>
+<selenese>
+	<command>clickAndWait</command>
+	<target><![CDATA[link=Passing data to DataProvider from Excel sheet]]></target>
+	<value><![CDATA[]]></value>
+</selenese>
+<selenese>
+	<command>clickAndWait</command>
+	<target><![CDATA[css=button.add_to_cart]]></target>
+	<value><![CDATA[]]></value>
+</selenese>
+<selenese>
+	<command>clickAndWait</command>
+	<target><![CDATA[xpath=(//button[@type='submit'])[3]]]></target>
+	<value><![CDATA[]]></value>
+</selenese>
+<selenese>
+	<command>clickAndWait</command>
+	<target><![CDATA[xpath=(//button[@type='submit'])[4]]]></target>
+	<value><![CDATA[]]></value>
+</selenese>
+<selenese>
+	<command>clickAndWait</command>
+	<target><![CDATA[css=button[type="submit"]]]></target>
+	<value><![CDATA[]]></value>
+</selenese>
+<selenese>
+	<command>clickAndWait</command>
+	<target><![CDATA[css=button[type="submit"]]]></target>
+	<value><![CDATA[]]></value>
+</selenese>
+<selenese>
+	<command>clickAndWait</command>
+	<target><![CDATA[link=Checkout]]></target>
+	<value><![CDATA[]]></value>
+</selenese>
+<selenese>
+	<command>clickAndWait</command>
+	<target><![CDATA[css=button[type="submit"]]]></target>
+	<value><![CDATA[]]></value>
+</selenese>
+</TestCase>
