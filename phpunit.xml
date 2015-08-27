@@ -1,0 +1,31 @@
+<?php
+class Example extends PHPUnit_Extensions_SeleniumTestCase
+{
+  protected function setUp()
+  {
+    $this->setBrowser("*chrome");
+    $this->setBrowserUrl("http://seleniumeasy.com/");
+  }
+
+  public function testMyTestCase()
+  {
+    $this->open("/tags/dataprovider");
+    $this->click("link=Passing data to DataProvider from Excel sheet");
+    $this->waitForPageToLoad("30000");
+    $this->click("css=button.add_to_cart");
+    $this->waitForPageToLoad("30000");
+    $this->click("xpath=(//button[@type='submit'])[3]");
+    $this->waitForPageToLoad("30000");
+    $this->click("xpath=(//button[@type='submit'])[4]");
+    $this->waitForPageToLoad("30000");
+    $this->click("css=button[type=\"submit\"]");
+    $this->waitForPageToLoad("30000");
+    $this->click("css=button[type=\"submit\"]");
+    $this->waitForPageToLoad("30000");
+    $this->click("link=Checkout");
+    $this->waitForPageToLoad("30000");
+    $this->click("css=button[type=\"submit\"]");
+    $this->waitForPageToLoad("30000");
+  }
+}
+?>

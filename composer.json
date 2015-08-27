@@ -16,6 +16,8 @@
 
     	"phpunit/phpunit": "~4.0",
     	"phpspec/phpspec": "~2.1",
+    	"phpunit/dbunit": ">=1.2",
+    	"phpunit/phpunit-selenium": ">=1.2",
     	"phing/phing": "2.11.0"
 
     },	
